@@ -7,7 +7,7 @@ mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB ...');
 });
 
-mongoose.connection.on('error', err => {
+mongoose.connection.on('error', (err) => {
   console.error(err);
 });
 
@@ -21,5 +21,5 @@ async function mongoDisconnect() {
 
 module.exports = {
   mongoConnect,
-  mongoDisconnect
+  mongoDisconnect,
 };

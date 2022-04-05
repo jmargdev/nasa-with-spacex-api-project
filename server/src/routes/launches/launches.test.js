@@ -7,6 +7,10 @@ describe('Launches API', () => {
     await mongoConnect();
   });
 
+  afterAll(async () => {
+    await mongoDisconnect();
+  });
+
   describe('Test GET /launches', () => {
     test('It should respond with 200 success', async () => {
       const response = await request(app)
@@ -20,21 +24,21 @@ describe('Launches API', () => {
     const completeLaunchData = {
       mission: 'Kepler Exploration X',
       rocket: 'Explorer IS1',
-      target: 'Kepler-186 f',
-      launchDate: 'November 27, 2026'
+      target: 'Kepler-62 f',
+      launchDate: 'November 27, 2026',
     };
 
     const launchDataWithoutDate = {
       mission: 'Kepler Exploration X',
       rocket: 'Explorer IS1',
-      target: 'Kepler-186 f'
+      target: 'Kepler-62 f',
     };
 
     const launchDataWithInvalidDate = {
       mission: 'Kepler Exploration X',
       rocket: 'Explorer IS1',
-      target: 'Kepler-186 f',
-      launchDate: 'zebradeltafox'
+      target: 'Kepler-62 f',
+      launchDate: 'zebradeltafox',
     };
 
     test('It should respond with 201 created', async () => {
@@ -58,7 +62,7 @@ describe('Launches API', () => {
         .expect(400);
 
       expect(response.body).toStrictEqual({
-        error: 'Missing required launch properties.'
+        error: 'Missing required launch properties.',
       });
     });
     test('It should catch invalid dates', async () => {
@@ -69,7 +73,7 @@ describe('Launches API', () => {
         .expect(400);
 
       expect(response.body).toStrictEqual({
-        error: 'Invalid launch date.'
+        error: 'Invalid launch date.',
       });
     });
   });
