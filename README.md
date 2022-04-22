@@ -48,22 +48,22 @@ The following tools were used in this project:
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting
+## :checkered_flag: Starting up the dev environment
 
 ```bash
 # Clone this project
 $ git clone https://github.com/jmargdev/nasa-with-spacex-api-project
 
-# Access
+# Change into the project directory
 $ cd nasa-with-spacex-api-project
 
-# Install dependencies
-$ npm install
+# Install's both client and server dependencies'
+$ npm run install
 
 # Run the project in development mode
 $ npm run dev
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8000>
 ```
 
 ## :memo: License
