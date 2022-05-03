@@ -23,7 +23,7 @@
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <!-- <a href="#memo-license">License</a> &#xa0; | &#xa0; -->
   <a href="https://github.com/jmargdev" target="_blank">Author</a>
 </p>
 
@@ -31,9 +31,9 @@
 
 ## :dart: About
 
-A Node.js project that has a backend with frontend implementation.
+A Node.js project that utilizes the SpaceX API, built with the technologies listed below.
 
-## :rocket: Technologies
+## :rocket: Technologies Used
 
 The following tools were used in this project:
 
@@ -46,9 +46,10 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+- Before starting :checkered_flag:, you must have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+- Create a free [Mongo Atlas](https://www.mongodb.com/cloud/atlas/) account or use a local MongoDB database.
 
-## :checkered_flag: Starting up the dev environment
+## :checkered_flag: Getting Started
 
 ```bash
 # Clone this project
@@ -57,18 +58,20 @@ $ git clone https://github.com/jmargdev/nasa-with-spacex-api-project
 # Change into the project directory
 $ cd nasa-with-spacex-api-project
 
-# Install's both client and server dependencies'
+# Rename server/.env.example to server/.env and add your MongoDB database connection string
+
+# Install client/server dependencies
 $ npm run install
 
-# Run the project in development mode
-$ npm run dev
+# Running the project
+$ npm run deploy
 
-# The server will initialize in the <http://localhost:8000>
+# Browse to the frontend at http://localhost:8000 to schedule your next space mission!
 ```
 
-## :memo: License
+<!-- ## :memo: License -->
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+<!-- This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file. -->
 
 Made with :heart: by <a href="https://github.com/jmargdev" target="_blank">John Margaronis</a>
 
