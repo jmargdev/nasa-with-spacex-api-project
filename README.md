@@ -29,11 +29,11 @@
 
 <br>
 
-## :dart: About
+## About
 
 A Node.js project that utilizes the SpaceX API, built with the technologies listed below.
 
-## :rocket: Technologies Used
+## Technologies Used
 
 The following tools were used in this project:
 
@@ -44,12 +44,12 @@ The following tools were used in this project:
 - [Mongoose](https://mongoosejs.com/)
 - [Jest](https://jestjs.io/)
 
-## :white_check_mark: Requirements
+## Requirements
 
 - Before starting :checkered_flag:, you must have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 - Create a free [Mongo Atlas](https://www.mongodb.com/cloud/atlas/) account or use a local MongoDB database.
 
-## :checkered_flag: Getting Started
+## Getting Started
 
 ```bash
 # Clone this project
@@ -68,6 +68,19 @@ $ npm run deploy
 
 # Browse to the frontend at http://localhost:8000 to schedule your next space mission!
 ```
+
+## Docker
+
+1. Ensure you have the latest version of Docker installed
+2. Run `docker build -t nasa-project .`
+3. Run `docker run -it -p 8000:8000 nasa-project`
+
+## Running the Tests
+
+To run any automated tests, run `npm test`. This will:
+
+- Run all the client-side tests: `npm test --prefix client`
+- Run all the server-side tests: `npm test --prefix server`
 
 <!-- ## :memo: License -->
 
